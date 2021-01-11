@@ -434,7 +434,6 @@ const ProductsContextProvider = ({ children }) => {
 
         getProductsFashion,
         pageAdmin,
-        pageTask,
         getProductsAdmin,
 
         searchProducts,
