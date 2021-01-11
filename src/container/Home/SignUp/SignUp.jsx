@@ -9,13 +9,15 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { authContext } from "../../../contexts/AuthContext";
-import Header from '../../GlobalHeader/HeaderHome'
-
+import Header from "../../GlobalHeader/HeaderHome";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
-    </Typography>
+    <Typography
+      variant="body2"
+      color="textSecondary"
+      align="center"
+    ></Typography>
   );
 }
 
@@ -41,70 +43,71 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SignUp = (props) => {
-  const {registerUser, hasAccount} = useContext(authContext)
+  const { registerUser, hasAccount } = useContext(authContext);
   const classes = useStyles();
 
-
   return (
-    <div >
-      <Header/>
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper} >
-        <Typography component="h1" variant="h5">
-          Sign up
-        </Typography>
-        <form  onSubmit={(e) => registerUser(e, props.history)} className={classes.form}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-            
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="#ba000d"
-            className={classes.submit}
+    <div>
+      <Header />
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Typography component="h1" variant="h5">
+            Sign up
+          </Typography>
+          <form
+            onSubmit={(e) => registerUser(e, props.history)}
+            className={classes.form}
           >
-            Sign Up
-          </Button>
-          <Grid container justify="flex-end">
-            <Grid item>
-              <Link onClick={() => hasAccount(props.history)} variant="body2">
-                Already have an account? Sign in
-              </Link>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+              </Grid>
             </Grid>
-          </Grid>
-        </form>
-      </div>
-      <Box mt={5}>
-        <Copyright />
-      </Box>
-    </Container>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="#ba000d"
+              className={classes.submit}
+            >
+              Sign Up
+            </Button>
+            <Grid container justify="flex-end">
+              <Grid item>
+                <Link onClick={() => hasAccount(props.history)} variant="body2">
+                  Already have an account? Sign in
+                </Link>
+              </Grid>
+            </Grid>
+          </form>
+        </div>
+        <Box mt={5}>
+          <Copyright />
+        </Box>
+      </Container>
     </div>
   );
-}
+};
 
 export default SignUp;

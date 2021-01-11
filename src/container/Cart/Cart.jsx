@@ -128,7 +128,6 @@ export default function Cart() {
                             }
                             value={item.count}
                             type="number"
-                            value={item.count}
                             min="1"
                           />
                         </StyledTableCell>
@@ -139,10 +138,9 @@ export default function Cart() {
 
                         <StyledTableCell align="right">
                           <button
-                            className="btn-admin"
                             style={{ marginTop: "20px" }}
                             className="btn btn-danger"
-                            onClick={() =>  deleteProductInCart(item.product.id)}
+                            onClick={() => deleteProductInCart(item.product.id)}
                           >
                             Delete
                           </button>

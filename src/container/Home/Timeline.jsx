@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
   },
-
 }));
 
 export default function CustomizedTimeline() {
@@ -30,7 +29,7 @@ export default function CustomizedTimeline() {
 
   return (
     <Timeline align="alternate" className={classes.timelinemain}>
-      <Typography 
+      <Typography
         component="div"
         variant="h3"
         style={{
@@ -42,12 +41,12 @@ export default function CustomizedTimeline() {
           width: "100%",
         }}
       >
-        How it Works? 
+        How it Works?
       </Typography>
 
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography  variant="h6" color="textSecondary">
+          <Typography variant="h6" color="textSecondary">
             Step №1
           </Typography>
         </TimelineOppositeContent>
@@ -59,16 +58,16 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography  variant="h6" component="h3">
+            <Typography variant="h6" component="h3">
               Shop
             </Typography>
-            <Typography >Select Fav Items and Order</Typography>
+            <Typography>Select Fav Items and Order</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography  variant="body2" color="textSecondary">
+          <Typography variant="body2" color="textSecondary">
             Step №2
           </Typography>
         </TimelineOppositeContent>
@@ -80,10 +79,10 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography  variant="h6" component="h3">
+            <Typography variant="h6" component="h3">
               Track
             </Typography>
-            <Typography >Know Exactly when your Orders are Delivered</Typography>
+            <Typography>Know Exactly when your Orders are Delivered</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -96,10 +95,10 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography  variant="h6" component="h3">
+            <Typography variant="h6" component="h3">
               FeedBack
             </Typography>
-            <Typography >
+            <Typography>
               We love our clients and will love to hear back
             </Typography>
           </Paper>
@@ -113,10 +112,10 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography  variant="h6" component="h3">
+            <Typography variant="h6" component="h3">
               Dicount
             </Typography>
-            <Typography >Get Discount for your Next Purchase</Typography>
+            <Typography>Get Discount for your Next Purchase</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>

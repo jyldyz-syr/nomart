@@ -3,13 +3,12 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Container, NavItem, NavLink } from "reactstrap";
 
 const styles = {
-  
   font: {
     marginLeft: "20px",
     marginTop: "50px",
     marginBottom: "50px",
-    display:"flex",
-    justifyContent:"center"
+    display: "flex",
+    justifyContent: "center",
   },
 
   footer: {
@@ -121,7 +120,6 @@ const Footer = () => {
                 </li>
               </ul>
             </MDBCol>
-            
           </MDBRow>
         </MDBContainer>
       </MDBFooter>

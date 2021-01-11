@@ -3,8 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 
-
-
 const images = [
   {
     url:
@@ -120,8 +118,8 @@ export default function ButtonBases() {
           alignItems: "center",
           height: "20vh",
           width: "100%",
-          marginTop:"25px",
-          marginBottom:"20px"
+          marginTop: "25px",
+          marginBottom: "20px",
         }}
       >
         What our Customers Think

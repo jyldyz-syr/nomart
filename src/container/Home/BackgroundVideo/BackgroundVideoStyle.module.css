@@ -1,37 +1,27 @@
 .Container {
-    position: relative;
-    min-height: auto;
-    max-height: auto;
-    overflow: hidden;
-    margin-bottom: auto;
+  position: relative;
+  min-height: auto;
+  max-height: auto;
+  overflow: hidden;
+  margin-bottom: auto;
 }
-
 
 /* Style the video: 100% width and height to cover the entire window */
 .Video {
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Add some content at the bottom of the video/page */
-  .Content {
-    position: absolute;
-    top: 0;
-    color:#f1f1f1;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    padding: 0;
-  }
+  width: 100%;
+  height: 100%;
+}
 
-
-
-  
- 
-  
-  
-
-  
+/* Add some content at the bottom of the video/page */
+.Content {
+  position: absolute;
+  top: 0;
+  color: #f1f1f1;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 0;
+}

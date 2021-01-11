@@ -40,8 +40,6 @@ code {
   background-repeat: no-repeat;
 }
 
-
-
 .buttonProduct1 {
   width: 180px;
   height: 60px;
@@ -56,9 +54,6 @@ code {
   display: flex;
   text-align: center;
 }
-
-
-
 
 .MuiContainer-root {
   display: flex !important;
@@ -82,27 +77,13 @@ code {
   font-weight: 200;
 }
 
-
-
 /* BUTTON */
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 500px) {
   .productsDiv {
     width: 0;
     height: 0;
   }
-
-
 
   .MuiTypography-h3 {
     height: 5vh !important;

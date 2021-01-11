@@ -61,11 +61,9 @@ export default function Products() {
   const classes = useStyles();
 
   return (
-    <div className="productsDiv" >
+    <div className="productsDiv">
       <div className={classes.root1}>
-        <Container xs="8" >
-        
-        </Container>
+        <Container xs="8"></Container>
 
         <div className={classes.root} style={{ height: "40vh" }}>
           <GridList className={classes.gridList} cols={4}>

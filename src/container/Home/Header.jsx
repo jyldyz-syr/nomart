@@ -16,12 +16,17 @@ import {
 import { FormGroup, Label, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { faUserPlus,  faHeart  } from "@fortawesome/free-solid-svg-icons";
+import { faUserPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link, useHistory } from "react-router-dom";
-import {productsContext} from '../../contexts/ProductsContext'
+import { productsContext } from "../../contexts/ProductsContext";
 
 const Header = (props) => {
-  const { productsCountInCart, search,searchProducts, productsCountInSelect} = useContext(productsContext);
+  const {
+    productsCountInCart,
+    search,
+    searchProducts,
+    productsCountInSelect,
+  } = useContext(productsContext);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,18 +34,17 @@ const Header = (props) => {
 
   const history = useHistory();
 
-  function handleSearch(e){
+  function handleSearch(e) {
     let inp_val = e.target.value;
     const search = new URLSearchParams(window.location.search);
     console.log(search);
     console.log(window.location);
-    search.set("q",inp_val);
+    search.set("q", inp_val);
 
-    console.log(search.toString())
-    history.replace("?"+search)
-    searchProducts()
+    console.log(search.toString());
+    history.replace("?" + search);
+    searchProducts();
   }
-
 
   return (
     <div>
@@ -52,7 +56,7 @@ const Header = (props) => {
             navbar
             style={{ marginTop: "25px", fontSize: "20px" }}
           >
-             <NavItem>
+            <NavItem>
               <NavLink style={{ color: "#FFFFFF" }} href="/fashion">
                 Shop
               </NavLink>
@@ -87,29 +91,30 @@ const Header = (props) => {
             />
 
             <NavItem>
-
               <NavLink
                 style={{
                   fontSize: "17px",
                   color: "White",
                   marginLeft: "300px",
-                  display:"flex",
+                  display: "flex",
                 }}
                 href="/cart"
               >
                 <FontAwesomeIcon
-                
                   icon={faShoppingCart}
-                  color={productsCountInCart !== 0 ? "red": "white"}
-                  style={{marginRight:"5px"}}
+                  color={productsCountInCart !== 0 ? "red" : "white"}
+                  style={{ marginRight: "5px" }}
                 />
-                 <> {productsCountInCart !== 0 ? "+" + productsCountInCart : ""}</>
+                <>
+                  {" "}
+                  {productsCountInCart !== 0 ? "+" + productsCountInCart : ""}
+                </>
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                style={{ fontSize: "17px", color: "White", display:"flex" }}
+                style={{ fontSize: "17px", color: "White", display: "flex" }}
                 href="/select"
               >
                 <FontAwesomeIcon
@@ -117,31 +122,24 @@ const Header = (props) => {
                   style={{ fontSize: "40px", paddingLeft: "15px" }}
                   style={{ marginRight: "5px" }}
                   color={productsCountInSelect !== 0 ? "red" : "white"}
-
                 />
-                 <>
+                <>
                   {" "}
-                  {productsCountInSelect !== 0 ? "+" + productsCountInSelect : ""}
+                  {productsCountInSelect !== 0
+                    ? "+" + productsCountInSelect
+                    : ""}
                 </>
-               
               </NavLink>
             </NavItem>
-            
+
             <NavItem>
               <NavLink
                 style={{ fontSize: "17px", color: "White" }}
                 href="/signup"
               >
-                <FontAwesomeIcon
-                  icon={faUserPlus}
-                  className="faUserPlus"
-                />
+                <FontAwesomeIcon icon={faUserPlus} className="faUserPlus" />
               </NavLink>
             </NavItem>
-
-
-            
-
           </Nav>
         </Collapse>
       </Navbar>

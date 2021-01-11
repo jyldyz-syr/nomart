@@ -5,16 +5,14 @@ import Footer from "./container/Home/Footer/Footer";
 // import Admin from "./container/AdminPage/Admin";
 import AddProduct from "./container/AdminPage/AddProduct";
 import EditProduct from "./container/AdminPage/EditProduct";
-import ProductsContextProvider from '../src/contexts/ProductsContext';
-import Cart from './container/Cart/Cart';
-import ProductCard from './container/ProductCard/ProductCard';
+import ProductsContextProvider from "../src/contexts/ProductsContext";
+import Cart from "./container/Cart/Cart";
+import ProductCard from "./container/ProductCard/ProductCard";
 
-
-import Fashion from './container/FashionShop/Fashion'
+import Fashion from "./container/FashionShop/Fashion";
 
 import Admin from "./container/AdminPage/Admin";
-import Select from './container/Cart/Select'
-
+import Select from "./container/Cart/Select";
 
 // import { Link } from 'react-router';
 
@@ -36,7 +34,6 @@ const Routes = () => {
 
         <ProductsContextProvider>
           <Switch>
-
             <Route exact path="/admin" component={Admin} />
 
             <Route exact path="/addproduct" component={AddProduct} />
@@ -48,12 +45,8 @@ const Routes = () => {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/address" component={AddressForm} />
             <Route exact path="/payment" component={PaymentForm} />
-            
-
 
             <Route exact path="/productcart/:id" component={ProductCard} />
-
-
 
             <AuthContextProvider>
               <Route exact path="/signin" component={SignIn} />

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
@@ -7,40 +7,36 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { Container } from "reactstrap";
 import Header from "../GlobalHeader/HeaderHome";
 import { Link } from "react-router-dom";
-import {productsContext} from "../../contexts/ProductsContext"
+import { productsContext } from "../../contexts/ProductsContext";
 import { calcTotalPrice } from "../../helpers/calcPrice";
 
-
 export default function PaymentForm() {
-  const {
-    cartData,
-  } = useContext(productsContext);
+  const { cartData } = useContext(productsContext);
 
   return (
-
-  
-    
     <Container>
       <Header />
 
       <React.Fragment>
-        <Typography variant="h6"  gutterBottom
-        
-        style={{
-          marginBottom:"2%"
-        }}>
+        <Typography
+          variant="h6"
+          gutterBottom
+          style={{
+            marginBottom: "2%",
+          }}
+        >
           Payment method
         </Typography>
 
-        <Typography variant="h6" gutterBottom
-        style={{
-          marginBottom:"2%"
-        }}
+        <Typography
+          variant="h6"
+          gutterBottom
+          style={{
+            marginBottom: "2%",
+          }}
         >
-        Total: {calcTotalPrice(cartData.products)}
+          Total: {calcTotalPrice(cartData.products)}
         </Typography>
-
-
 
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>

@@ -127,7 +127,6 @@ const ProductCard = (props) => {
                         <button
                           type="submit"
                           className="btn btn-primary mt-2 ml-2"
-                         
                         >
                           Go to Cart
                         </button>
@@ -137,10 +136,13 @@ const ProductCard = (props) => {
                         icon={faHeart}
                         color={"black"}
                         style={{ fontSize: "40px", paddingLeft: "15px" }}
-                        onClick={() => addAndDeleteProductInSelect(productDetails)}
-                      
+                        onClick={() =>
+                          addAndDeleteProductInSelect(productDetails)
+                        }
                         color={
-                          checkProductInSelect(productDetails.id) ? "red" : "black"
+                          checkProductInSelect(productDetails.id)
+                            ? "red"
+                            : "black"
                         }
                       />
                     </div>

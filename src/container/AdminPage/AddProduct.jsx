@@ -2,7 +2,7 @@ import React, { Fragment, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext";
 import { FormGroup, Label, Input, FormText } from "reactstrap";
-import Header from '../../container/GlobalHeader/HeaderHome'
+import Header from "../../container/GlobalHeader/HeaderHome";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({});
@@ -45,7 +45,7 @@ const AddProduct = () => {
             <div className="form-group">
               <label htmlFor="formGroupExampleInput">Description</label>
               <input
-              type="text"
+                type="text"
                 className="form-control"
                 name="description"
                 onChange={handleInputsValue}
@@ -69,7 +69,7 @@ const AddProduct = () => {
               <Input type="text" name="image" onChange={handleInputsValue} />
               <FormText color="muted">
                 This is some placeholder block-level help text for the above
-                input. It's a bit lighter and easily wraps to a new line.
+                input. It`s a bit lighter and easily wraps to a new line.
               </FormText>
             </FormGroup>
 

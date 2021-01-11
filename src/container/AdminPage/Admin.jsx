@@ -34,8 +34,6 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-
-
 const useStyles = makeStyles({
   table: {
     minWidth: 700,
@@ -63,7 +61,7 @@ export default function Admin() {
   useEffect(() => {
     getProductsAdmin();
     getProducts();
-  }, []);
+  }, [getProductsAdmin, getProducts]);
 
   return (
     <div>
@@ -101,13 +99,12 @@ export default function Admin() {
                   <StyledTableCell align="right">
                     <Avatar alt="Remy Sharp" src={item.image} />
                   </StyledTableCell>
-                  <StyledTableCell align="left" scope="row"> 
+                  <StyledTableCell align="left" scope="row">
                     {item.description}
                   </StyledTableCell>
                   <StyledTableCell align="right">{item.price}</StyledTableCell>
                   <StyledTableCell align="right">
                     <button
-                      className="btn-admin"
                       style={{ marginTop: "20px" }}
                       className="btn btn-danger"
                       onClick={() => deleteContact(item.id)}
@@ -118,7 +115,6 @@ export default function Admin() {
                   <StyledTableCell align="right">
                     <Link to="/edit">
                       <button
-                        className="btn-admin"
                         style={{ marginTop: "20px" }}
                         className="btn btn-warning"
                         onClick={() => editProduct(item.id)}
@@ -137,10 +133,10 @@ export default function Admin() {
       <Container>
         <div>
           <Pagination
-          style={{
-            display:"flex",
-            justifyContent:"center"
-          }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
             onChange={(e, newpage) => pageTask(newpage)}
             page={parseInt(search.get("_page")) || 1}
             count={Math.ceil(totalCount / 6)}
@@ -148,7 +144,6 @@ export default function Admin() {
           />
         </div>
       </Container>
-
     </div>
   );
 }

@@ -22,9 +22,12 @@ import { Link, useHistory } from "react-router-dom";
 import { productsContext } from "../../contexts/ProductsContext";
 
 const Header = (props) => {
-  const { productsCountInCart, search, searchProducts, productsCountInSelect} = useContext(
-    productsContext
-  );
+  const {
+    productsCountInCart,
+    search,
+    searchProducts,
+    productsCountInSelect,
+  } = useContext(productsContext);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -121,8 +124,6 @@ const Header = (props) => {
               </NavLink>
             </NavItem>
 
-
-
             <NavItem>
               <NavLink
                 style={{ fontSize: "17px", color: "Black" }}
@@ -132,10 +133,9 @@ const Header = (props) => {
               </NavLink>
             </NavItem>
 
-
             <NavItem>
               <NavLink
-                style={{ fontSize: "17px", color: "Black", display:"flex" }}
+                style={{ fontSize: "17px", color: "Black", display: "flex" }}
                 href="/select"
               >
                 <FontAwesomeIcon
@@ -143,13 +143,13 @@ const Header = (props) => {
                   style={{ fontSize: "40px", paddingLeft: "15px" }}
                   style={{ marginRight: "5px" }}
                   color={productsCountInSelect !== 0 ? "red" : "black"}
-
                 />
-                 <>
+                <>
                   {" "}
-                  {productsCountInSelect !== 0 ? "+" + productsCountInSelect : ""}
+                  {productsCountInSelect !== 0
+                    ? "+" + productsCountInSelect
+                    : ""}
                 </>
-               
               </NavLink>
             </NavItem>
           </Nav>

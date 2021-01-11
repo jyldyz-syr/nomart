@@ -10,10 +10,8 @@ import Paper from "@material-ui/core/Paper";
 import { Container } from "reactstrap";
 import Avatar from "@material-ui/core/Avatar";
 
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Button from "@material-ui/core/Button";
-
-
 
 import { productsContext } from "../../contexts/ProductsContext";
 import { Link } from "react-router-dom";
@@ -66,16 +64,12 @@ export default function Select() {
     addAndDeleteProductInCart,
     checkProductInCart,
     deleteProductInSelect,
-
-
   } = useContext(productsContext);
-
 
   useEffect(() => {
     getSelect();
   }, []);
 
- 
   return (
     <div>
       <Header />
@@ -101,8 +95,6 @@ export default function Select() {
                     <StyledTableCell align="right">Price</StyledTableCell>
                     <StyledTableCell align="right">Add to Cart</StyledTableCell>
                     <StyledTableCell align="right">Delete</StyledTableCell>
-
-              
                   </TableRow>
                 </TableHead>
                 {selectData.products.map((item) => (
@@ -124,39 +116,35 @@ export default function Select() {
                         <StyledTableCell align="right">
                           {item.product.price}
                         </StyledTableCell>
-                       
-
-
 
                         <StyledTableCell align="right">
-                        
-                    
-                        <Button size="small" color="primary"
-                         onClick={() => addAndDeleteProductInCart(item.product)}
-                         color={
-                           checkProductInCart(item.product.id)
-                             ? "primary"
-                             : "initial"
-                         }
-                        >
-                        <ShoppingCartIcon/>
-                        </Button>
-                         Buy
+                          <Button
+                            size="small"
+                            onClick={() =>
+                              addAndDeleteProductInCart(item.product)
+                            }
+                            color={
+                              checkProductInCart(item.product.id)
+                                ? "primary"
+                                : "initial"
+                            }
+                          >
+                            <ShoppingCartIcon />
+                          </Button>
+                          Buy
                         </StyledTableCell>
-                       
+
                         <StyledTableCell align="right">
-                        <button
-                            className="btn-admin"
+                          <button
                             style={{ marginTop: "20px" }}
                             className="btn btn-danger"
-                            onClick={() =>   deleteProductInSelect(item.product.id)}
+                            onClick={() =>
+                              deleteProductInSelect(item.product.id)
+                            }
                           >
                             Delete
                           </button>
-
-                          </StyledTableCell>
-
-
+                        </StyledTableCell>
                       </StyledTableRow>
                     </TableBody>
                   </>
@@ -164,21 +152,21 @@ export default function Select() {
               </Table>
             </TableContainer>
 
-           
-            <Link to="/cart"
-            style={{
+            <Link
+              to="/cart"
+              style={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop:"10px"
-              }}>
-
+                marginTop: "10px",
+              }}
+            >
               <button
                 onClick={makeOrder}
                 className="btn btn-primary"
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop:"10px"
+                  marginTop: "10px",
                 }}
               >
                 Cart
