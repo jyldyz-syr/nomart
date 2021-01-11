@@ -45,7 +45,7 @@ const Advantages = () => {
             />
             <h4 style={{ marginBottom: "30px" }}>Free Shipping</h4>
 
-            <p>Free Shipping for any product and it's world wide</p>
+            <p>Free Shipping for any product and it`s world wide</p>
           </Col>
           <Col xs="12" md="6" lg="3">
             <FontAwesomeIcon

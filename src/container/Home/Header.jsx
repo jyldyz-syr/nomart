@@ -119,7 +119,6 @@ const Header = (props) => {
               >
                 <FontAwesomeIcon
                   icon={faHeart}
-                  style={{ fontSize: "40px", paddingLeft: "15px" }}
                   style={{ marginRight: "5px" }}
                   color={productsCountInSelect !== 0 ? "red" : "white"}
                 />

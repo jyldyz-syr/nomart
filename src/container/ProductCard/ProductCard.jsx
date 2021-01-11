@@ -134,7 +134,6 @@ const ProductCard = (props) => {
 
                       <FontAwesomeIcon
                         icon={faHeart}
-                        color={"black"}
                         style={{ fontSize: "40px", paddingLeft: "15px" }}
                         onClick={() =>
                           addAndDeleteProductInSelect(productDetails)
