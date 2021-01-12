@@ -98,9 +98,7 @@ const ProductsContextProvider = ({ children }) => {
     if (!params.get("_page")) params.set("_page", 1);
     if (!params.get("_limit")) params.set("_limit", 6);
     history.push("?" + params);
-    let { data, headers } = await axios(
-      `http://localhost:8000/products?${params}`
-    );
+    let { data, headers } = await axios(`${JSON_API}/products?${params}`);
     dispatch({
       type: "SET_TOTAL_COUNT",
       payload: parseInt(headers["x-total-count"]),
@@ -116,9 +114,7 @@ const ProductsContextProvider = ({ children }) => {
     if (!params.get("_page")) params.set("_page", 1);
     if (!params.get("_limit")) params.set("_limit", 6);
     history.push("/admin?" + params);
-    let { data, headers } = await axios(
-      `http://localhost:8000/products?${params}`
-    );
+    let { data, headers } = await axios(`${JSON_API}/products?${params}`);
     dispatch({
       type: "SET_TOTAL_COUNT",
       payload: parseInt(headers["x-total-count"]),
@@ -140,7 +136,7 @@ const ProductsContextProvider = ({ children }) => {
   }
 
   async function getProductID(id) {
-    let { data } = await axios(`http://localhost:8000/products/${id}`);
+    let { data } = await axios(`${JSON_API}/products/${id}`);
     dispatch({
       type: "GET_PRODUCT_DETAILS",
       payload: data,
@@ -148,17 +144,17 @@ const ProductsContextProvider = ({ children }) => {
   }
 
   async function addProduct(newProduct) {
-    await axios.post("http://localhost:8000/products", newProduct);
+    await axios.post(`${JSON_API}/products`, newProduct);
     getProductsAdmin();
   }
 
   async function deleteContact(id) {
-    await axios.delete(`http://localhost:8000/products/${id}`);
+    await axios.delete(`${JSON_API}/products/${id}`);
     getProductsAdmin();
   }
 
   async function editProduct(id) {
-    const { data } = await axios.patch(`http://localhost:8000/products/${id}`);
+    const { data } = await axios.patch(`${JSON_API}/products/${id}`);
     dispatch({
       type: "EDIT_PRODUCTS_DATA",
       payload: data,
@@ -168,10 +164,7 @@ const ProductsContextProvider = ({ children }) => {
   const saveProduct = async (newProduct, history) => {
     console.log(newProduct, history);
     try {
-      await axios.patch(
-        `http://localhost:8000/products/${newProduct.id}`,
-        newProduct
-      );
+      await axios.patch(`${JSON_API}/products/${newProduct.id}`, newProduct);
 
       dispatch({
         type: "SAVE_PRODUCT",

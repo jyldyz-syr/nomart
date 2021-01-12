@@ -5,7 +5,7 @@
       "description": "From Soviet Orientalism to the New Republics. Find new items to decorate walls, homes. Besides, we provide ethic clothes to wear.",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShu90Mmu5hAxxjuqt8mJ5JTcKDKgkaFJ1vFA&usqp=CAU",
       "price": "3000",
-      "category": "Sculptures",   
+      "category": "Sculptures",
       "id": 4
     },
     {
@@ -65,19 +65,11 @@
       "id": 12
     },
     {
-      "title": "Decor - 3 ",
-      "description": "From Soviet Orientalism to the New Republics. Find new items to decorate walls, homes. Besides, we provide ethic clothes to wear.",
-      "price": "20000",
-      "category": "Decor",
-      "image": "https://www.gmirk.kz/images/central_asia_1.jpg",
+      "title": "Jay Jay",
+      "description": "Jay Is COOL",
+      "price": "50000",
+      "image": "https://media-exp1.licdn.com/dms/image/C4D03AQECDFstdDxgUQ/profile-displayphoto-shrink_400_400/0/1604412439059?e=1613606400&v=beta&t=zV7lGL3DYhdkE0XzQZIFDn9SK0t5p5JKH_GnQaiShi0",
       "id": 13
-    },
-    {
-      "title": "JULZZZZ",
-      "description": "JULZZZZ",
-      "price": "20000",
-      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gold-select-201810?wid=892&hei=820&&qlt=80&.v=1603332211000",
-      "id": 14
     }
   ]
 }
